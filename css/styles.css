@@ -6,16 +6,19 @@ body {
     line-height: 1.571428571;
     margin: 0;
     padding: 0;
+    color: #1F1F1F;
 }
 
 h2 {
     font-size: 32px;
     line-height: 1.3125;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 32px;
     line-height: 1.3125;
+    font-weight: 400;
 }
 
 p {
@@ -45,7 +48,7 @@ p {
     }
   }
 
-  /* style first block with 2 image columns */
+/* style first block with 2 image columns */
   .B2C {
     display: flex;
     flex-direction: column;
@@ -65,13 +68,15 @@ p {
     gap: 4px;
   }
 
-  .B2C__images__item {
-
-  }
-
   .B2C__images__item img {
     border-radius: 16px;
     max-width: 100%;
+    display: block;
+  }
+
+
+  .B2C__des {
+    color: #2C2A29;
   }
 
   @media only screen and (min-width: 768px) {
@@ -83,3 +88,87 @@ p {
         gap: 32px;
     }    
   }
+
+
+/* style second block with 2 columns image and text */
+.BIT {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 32px 0;
+}
+
+.BIT__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.BIT__item__inner {
+    box-sizing: border-box;
+}
+
+.BIT__item__text {
+    background-color: #F4F0EA;
+    border-radius: 16px;
+    padding: 38px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BIT__item__title {
+    margin-top: auto;
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+.BIT__item__subtitle {
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.BIT__item__image  {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.BIT__item__image img {
+    width: 100%;   
+    display: block; 
+}
+
+@media only screen and (min-width: 768px) {
+    .BIT {
+        margin: 64px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .BIT__item {
+        flex-direction: row;
+    }
+
+    .BIT__item__inner {
+        width: calc(50% - 4px);
+    }
+
+    .BIT__image-left .BIT__item__image {
+        order: -1;
+    }
+}
+
+@media only screen and (min-width: 1200px) { 
+    .BIT__item__text {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .BIT__item__title {
+        margin-bottom: 16px;
+    }
+
+    .BIT__item__subtitle {
+        font-size: 20px;
+    }
+}
