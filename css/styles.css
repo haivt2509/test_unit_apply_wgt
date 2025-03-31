@@ -4,6 +4,8 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 1.571428571;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -14,6 +16,10 @@ h2 {
 h3 {
     font-size: 32px;
     line-height: 1.3125;
+}
+
+p {
+    margin: 0 0 16px;
 }
 
 .main {
@@ -37,4 +43,43 @@ h3 {
     .main {
         padding: 0 32px;
     }
+  }
+
+  /* style first block with 2 image columns */
+  .B2C {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    max-width: 810px;
+    margin:32px auto;
+    text-align: center;
+  }
+
+  .B2C__h3 {
+    margin: 0;
+  }
+
+  .B2C__images {
+    display: flex; 
+    gap: 4px;
+  }
+
+  .B2C__images__item {
+
+  }
+
+  .B2C__images__item img {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .B2C {
+        margin: 64px auto;
+    }
+
+    .B2C__images {
+        gap: 32px;
+    }    
   }
